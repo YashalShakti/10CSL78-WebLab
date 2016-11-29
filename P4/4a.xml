@@ -1,0 +1,37 @@
+<!--
+ Design an XML document to store information about a student in an engineering college affiliated to VTU. The information must include USN, Name, Name of the College, Brach, Year of Joining, and e-mail id. Make up sample data for 3 students. Create a CSS style sheet and use it to display the document.
+ -->
+
+<?xml-stylesheet type="text/css" href="a.css"?>
+<student-info>
+	<h1>Student Information</h1>
+	<h2>Student 1</h2>
+	<student>
+		<label>USN: <USN>1XY13CS001</USN></label>
+		<label>Name: <name>John</name></label>
+		<label>College: <college>IIT, Bom</college></label>
+		<label>Branch: <branch>CSE</branch></label>
+		<label>Year: <year>2020</year></label>
+		<label>Email: <email>John@iit.com</email></label>
+	</student>
+	<h2>Student 2</h2>
+	<student>
+		<label>USN: <USN>1XY13CS002</USN></label>
+		<label>Name: <name>Siya</name></label>
+		<label>College: <college>IIT, Bom</college></label>
+		<label>Branch: <branch>CSE</branch></label>
+		<label>Year: <year>2020</year></label>
+		<label>Email: <email>Siya@iit.com</email></label>
+	</student>
+	<h2>Student 3</h2>
+	<student>
+		<label>USN: <USN>1XY13CS003</USN></label>
+		<label>Name: <name>Cena</name></label>
+		<label>College: <college>IIT, Bom</college></label>
+		<label>Branch: <branch>CSE</branch></label>
+		<label>Year: <year>2020</year></label>
+		<label>Email: <email>Cena@iit.com</email></label>
+	</student>
+
+</student-info>
+

@@ -1,0 +1,61 @@
+<!--  
+ Develop and demonstrate, using Javascript script, a XHTML document that contains three short paragraphs of text, stacked on top of each other, with only enough of each showing so that the mouse cursor can be placed over some part of  them. When the cursor is placed over the exposed part of any paragraph, it should rise to the top to become completely visible.
+ 
+ Modify the above document so that when a paragraph is moved from the top stacking position, it returns to its original position rather than to the bottom.
+ -->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>3B</title>
+		<style type="text/css">
+
+		p {
+			position:absolute;
+        	width: 40%;
+        	height:30%;
+        	background:#fefefe;
+        	border:thin #ddd solid;
+		}
+
+        #plane1 {	
+        	left:20%;
+        	top:20%;
+    		z-index=1;	
+        }
+
+        #plane2 {
+        	left:25%;
+        	top:25%;
+    		z-index=2;	
+        }
+
+        #plane3 {
+        	left:30%;
+        	top:30%;
+    		z-index=3;	
+        }
+
+        </style>
+    </head>
+    
+    <body>
+    	<script type="text/javascript">
+    		var topPlane = "plane3";
+            var originalPosition;
+    		function mover(currentPlane, position) {
+				document.getElementById(currentPlane).style.zIndex="4";
+    			topPlane=currentPlane;
+                originalPosition = position;
+    		}
+
+            function moveBack(currentPlane) {
+                document.getElementById(currentPlane).style.zIndex=originalPosition;
+            }
+    	</script>
+    	<p id="plane1" onMouseOver="mover(this.id, '1');" onMouseOut="moveBack(this.id)"> Some text 1</p>
+    	<p id="plane2" onMouseOver="mover(this.id, '2');" onMouseOut="moveBack(this.id)"> Some text 2</p>
+    	<p id="plane3" onMouseOver="mover(this.id, '3');" onMouseOut="moveBack(this.id)"> Some text 3</p>
+    </body>
+</html>

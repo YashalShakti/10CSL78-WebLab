@@ -1,0 +1,25 @@
+<!--
+ Input :  A number n obtained using prompt
+ Output:  A table of numbers from 1 to n and their  squares using alert
+-->
+
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"!>
+<html>
+<head>
+	<title>Squares of numbers</title>
+</head>
+<body>
+	<h1>Squares of numbers are</h1>
+	<script type="text/javascript" >
+		var n = prompt("Enter the number")
+		if (n < 0) {
+			alert("Number is not valid")
+		} else {
+			for (i=1;i<=n;i++) {
+				document.write(i + "->" + i*i + "<br/>")
+			}
+		}
+	</script>
+</body>
+</html>
