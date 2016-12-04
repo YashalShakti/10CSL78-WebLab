@@ -10,13 +10,12 @@
 	<title>Squares of numbers</title>
 </head>
 <body>
-	<h1>Squares of numbers are</h1>
 	<script type="text/javascript" >
 		var n = prompt("Enter the number")
-		if (n < 0) {
+		if (n <= 0) {
 			alert("Number is not valid")
 		} else {
-			var output = "";
+			var output = "Squares of numbers are: \n";
 			for (i=1;i<=n;i++) {
 				output += (i + "->" + i*i + "\n");
 			}
