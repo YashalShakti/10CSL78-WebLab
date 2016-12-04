@@ -16,9 +16,11 @@
 		if (n < 0) {
 			alert("Number is not valid")
 		} else {
+			var output = "";
 			for (i=1;i<=n;i++) {
-				document.write(i + "->" + i*i + "<br/>")
+				output += (i + "->" + i*i + "\n");
 			}
+			alert(output);
 		}
 	</script>
 </body>
