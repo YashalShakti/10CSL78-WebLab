@@ -30,6 +30,15 @@ Changed the Options line in:
 to
 
     Options +ExecCGI
+
+# For MySQL DBI
+perl -MCPAN -e shell # Choose sudo or local
+perl Makefile.PL --testdb=test --testuser=username --testpassword=password --testhost=localhost
+make
+make test
+sudo make install
+
+
 sudo apachectl restart
 # Document root at /Library/WebServer/Documents
 
