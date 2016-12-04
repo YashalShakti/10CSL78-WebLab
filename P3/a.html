@@ -8,40 +8,40 @@
         <title>3A</title>
 		<style type="text/css">
 
-		p {
-			position:absolute;
-        	width: 40%;
-        	height:30%;
-        	background:#fefefe;
-        	border:thin #ddd solid;
-		}
+			p {
+				position:absolute;
+				width: 40%;
+				height:30%;
+				background:#fefefe;
+				border:thin #ddd solid;
+			}
 
-        #plane1 {	
-        	left:20%;
-        	top:20%;
-    		z-index=1;	
-        }
+			#plane1 {	
+				left:20%;
+				top:20%;
+				z-index=1;	
+			}
 
-        #plane2 {
-        	left:25%;
-        	top:25%;
-    		z-index=2;	
-        }
+			#plane2 {
+				left:25%;
+				top:25%;
+				z-index=2;	
+			}
 
-        #plane3 {
-        	left:30%;
-        	top:30%;
-    		z-index=3;	
-        }
+			#plane3 {
+				left:30%;
+				top:30%;
+				z-index=3;	
+			}
 
-        </style>
+       		 </style>
     </head>
     
     <body>
     	<script type="text/javascript">
     		var topPlane = "plane3";
     		function mover(currentPlane) {
-				document.getElementById(topPlane).style.zIndex="0";
+			document.getElementById(topPlane).style.zIndex="0";
     			document.getElementById(currentPlane).style.zIndex="1";
     			topPlane=currentPlane;
     		}
