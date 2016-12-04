@@ -50,12 +50,12 @@
 			originalPosition = position;
 		}
 
-		function moveBack(currentPlane) {
-		    document.getElementById(currentPlane).style.zIndex=originalPosition;
+		function moveBack() {
+		    document.getElementById(topPlane).style.zIndex=originalPosition;
 	    	}
     	</script>
-    	<p id="plane1" onMouseOver="mover(this.id, '1');" onMouseOut="moveBack(this.id)"> Some text 1</p>
-    	<p id="plane2" onMouseOver="mover(this.id, '2');" onMouseOut="moveBack(this.id)"> Some text 2</p>
-    	<p id="plane3" onMouseOver="mover(this.id, '3');" onMouseOut="moveBack(this.id)"> Some text 3</p>
+    	<p id="plane1" onMouseOver="mover(this.id, '1');" onMouseOut="moveBack()"> Some text 1</p>
+    	<p id="plane2" onMouseOver="mover(this.id, '2');" onMouseOut="moveBack()"> Some text 2</p>
+    	<p id="plane3" onMouseOver="mover(this.id, '3');" onMouseOut="moveBack()"> Some text 3</p>
     </body>
 </html>
