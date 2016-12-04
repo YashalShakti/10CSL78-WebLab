@@ -13,46 +13,46 @@
 
 		p {
 			position:absolute;
-        	width: 40%;
-        	height:30%;
-        	background:#fefefe;
-        	border:thin #ddd solid;
+			width: 40%;
+			height:30%;
+			background:#fefefe;
+			border:thin #ddd solid;
 		}
 
-        #plane1 {	
-        	left:20%;
-        	top:20%;
-    		z-index=1;	
-        }
+		#plane1 {	
+			left:20%;
+			top:20%;
+			z-index=1;	
+		}
 
-        #plane2 {
-        	left:25%;
-        	top:25%;
-    		z-index=2;	
-        }
+		#plane2 {
+			left:25%;
+			top:25%;
+			z-index=2;	
+		}
 
-        #plane3 {
-        	left:30%;
-        	top:30%;
-    		z-index=3;	
-        }
+		#plane3 {
+			left:30%;
+			top:30%;
+			z-index=3;	
+		}
 
         </style>
     </head>
     
     <body>
     	<script type="text/javascript">
-    		var topPlane = "plane3";
-            var originalPosition;
-    		function mover(currentPlane, position) {
-				document.getElementById(currentPlane).style.zIndex="4";
-    			topPlane=currentPlane;
-                originalPosition = position;
-    		}
+		var topPlane = "plane3";
+		var originalPosition;
+		function mover(currentPlane, position) {
+			document.getElementById(currentPlane).style.zIndex="4";
+			topPlane=currentPlane;
+			originalPosition = position;
+		}
 
-            function moveBack(currentPlane) {
-                document.getElementById(currentPlane).style.zIndex=originalPosition;
-            }
+		function moveBack(currentPlane) {
+		    document.getElementById(currentPlane).style.zIndex=originalPosition;
+	    	}
     	</script>
     	<p id="plane1" onMouseOver="mover(this.id, '1');" onMouseOut="moveBack(this.id)"> Some text 1</p>
     	<p id="plane2" onMouseOver="mover(this.id, '2');" onMouseOut="moveBack(this.id)"> Some text 2</p>
