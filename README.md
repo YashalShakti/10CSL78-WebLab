@@ -44,9 +44,13 @@ to
 
 # For MySQL DBI
 `perl -MCPAN -e shell # Choose sudo or local`
+
 `perl Makefile.PL --testdb=test --testuser=username --testpassword=password --testhost=localhost`
+
 `make`
+
 `make test`
+
 `sudo make install`
 
 `sudo apachectl restart`
