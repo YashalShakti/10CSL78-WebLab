@@ -1,3 +1,6 @@
+# Write a Perl program to insert name and age information entered by the user into a table created using MySQL
+#  and to display the current contents of this table
+
 #!/usr/bin/perl
 use CGI qw(:standard);
 use DBI;
