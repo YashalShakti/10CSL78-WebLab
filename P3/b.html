@@ -22,19 +22,19 @@
 		#plane1 {	
 			left:20%;
 			top:20%;
-			z-index=1;	
+			z-index:1;
 		}
 
 		#plane2 {
 			left:25%;
 			top:25%;
-			z-index=2;	
+			z-index:2;
 		}
 
 		#plane3 {
 			left:30%;
 			top:30%;
-			z-index=3;	
+			z-index:3;
 		}
 
         </style>
@@ -48,6 +48,8 @@
 			document.getElementById(currentPlane).style.zIndex="4";
 			topPlane=currentPlane;
 			originalPosition = position;
+			console.log(topPlane);
+			console.log(originalPosition);
 		}
 
 		function moveBack() {
