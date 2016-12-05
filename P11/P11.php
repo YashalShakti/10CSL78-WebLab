@@ -16,7 +16,7 @@
 			$result=mysql_query("SELECT * FROM students WHERE name LIKE '%".$search."%'");
 			print "<h3> Search results:</h3>";
 			while($row = mysql_fetch_array($result)){
-				echo " <b>Name: ".$row["name"]."</b> <br/>Address1: ".$row['addr1'].
+				echo "<br/> <b>Name: ".$row["name"]."</b> <br/>Address1: ".$row['addr1'].
 				" <br/>Address2: ".$row['addr2']." <br/>Email: ".$row['email']."<br/>";
 			}
 		}
