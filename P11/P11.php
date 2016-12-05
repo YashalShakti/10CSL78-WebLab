@@ -3,6 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"!>
 <html> <body>
 <?php
+		# Use your username and password instead of "root",""
 		$con = mysql_connect("127.0.0.1","root","") or die("Error in MySQL connection" . mysql_error());
 		mysql_select_db("10CSL78");
 		$search = $_REQUEST["search"];
