@@ -1,0 +1,1 @@
+json.partial! "bookinfos/bookinfo", bookinfo: @bookinfo

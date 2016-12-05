@@ -1,0 +1,32 @@
+<html>
+	<head>
+	<title>Search books</title></head> <body>
+	<h3> Search for books by 'Title'</h3>
+	<!-- One form to take the title of the book and pass it as 'title' to main_controller.rb -->
+	<form> <input type="text" name="title" placeholder="Title"> <input type="submit"></form>
+	<br/>
+
+	<!-- If there are no books the result's length will be 0 and "No rows found" should be printed but 
+	if the form was not submitted the title will be nil and in that case when page first loads it is not printed -->
+	<%if @result.length == 0 
+			if @title != nil %>
+				No Rows found
+		<% end
+		else %>
+		<!-- results length is greater than 0; a simple table is printed -->
+			<h4> Search results </h4>
+			<table>
+				<tr> <td>Acc No.</td>	<td>Title</td>	<td>Author</td>		<td>Edition</td>	<td>Publication</td> </tr>
+				<% @result.each do |book| %>
+					<tr>	
+						<td><%=book.acct%></td> 	
+						<td><%=book.title%></td> 
+						<td><%=book.author%></td> 
+						<td><%=book.edition%></td> 
+						<td><%=book.publication%></td>
+					</tr>
+				<% end %>
+			</table>
+		<% end %> 
+	</body>
+</html>
