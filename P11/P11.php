@@ -15,10 +15,10 @@
 				print "<h3>Data inserted successfully <br/> <br/> </h3>"; # Can use else print(mysql_error()); to print error
 
 		} else {
-			$result=mysql_query("SELECT * FROM students WHERE name LIKE '%".$search."%'");
+			$result = mysql_query("SELECT * FROM students WHERE name LIKE '%".$search."%'");
 			if (mysql_num_rows($result) > 0) {
 				print "<h3> Search results:</h3>";
-				while($row = mysql_fetch_array($result)){
+				while ($row = mysql_fetch_array($result)){
 					echo "<br/> <b>Name: ".$row["name"]."</b> <br/>Address1: ".$row['addr1'].
 					" <br/>Address2: ".$row['addr2']." <br/>Email: ".$row['email']."<br/>";
 				}
