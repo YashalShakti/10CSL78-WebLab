@@ -11,11 +11,13 @@
 			$email=$_REQUEST["email"];
 			if(mysql_query("INSERT INTO students VALUES('$name','$addr1','$addr2','$email')"))
 				print "<h3>Data inserted successfully <br/> <br/> </h3>"; # Can use else print(mysql_error()); to print error
+
 		} else {
 			$result=mysql_query("SELECT * FROM students WHERE name LIKE '%".$search."%'");
 			print "<h3> Search results:</h3>";
 			while($row = mysql_fetch_array($result)){
-				echo " <b>Name: ".$row["name"]."</b> <br/>Address1: ".$row['addr1']." <br/>Address2: ".$row['addr2']." <br/>Email: ".$row['email']."<br/>";
+				echo " <b>Name: ".$row["name"]."</b> <br/>Address1: ".$row['addr1'].
+				" <br/>Address2: ".$row['addr2']." <br/>Email: ".$row['email']."<br/>";
 			}
 		}
 ?>
@@ -26,3 +28,8 @@
 <h3>Search:</h3>
 <form> <input type="text" name="search" placeholder="Name"> <input type="submit"> </form>
 </body> </html>
+
+<!-- 
+SQL - 
+CREATE TABLE students(name varchar(20), addr1 varchar(20), addr2 varchar(20), email varchar(20));
+-->
