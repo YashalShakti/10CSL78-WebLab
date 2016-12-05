@@ -1,4 +1,4 @@
-# How to setup/install
+# How to setup/install/execute
 ## MacOS
 
 `sudo apachectl start`
@@ -41,6 +41,18 @@ to
             Options +ExecCGI
             Require all granted
         </Directory>
+        
+## Fedora
+* Start Apache web Server - `systemctl start httpd.service`
+* Change the directory to `/var/www/html` and write HTML/XML/CSS/PHP.
+* Open http://localhost/name.html,.xml,.php
+* Change the directory to `/var/www/cgi-bin` for Perl/CGI programs. 
+* Change the permission to 777 - `chmod 777`
+* Open http://localhost/cgi-bin/name.cgi,.pl
+* Start MySQL service - `systemctl start mysqld.service`
+* Create MySQL user - `CREATE USER 'username'@'localhost' IDENTIFIED BY 'some_pass'`;
+* Grant access to user - `GRANT ALL ON *.* to username@localhost identified by 'some_pass'`;
+
 
 # For MySQL DBI
 `perl -MCPAN -e shell # Choose sudo or local`
