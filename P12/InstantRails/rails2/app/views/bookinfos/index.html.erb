@@ -1,0 +1,28 @@
+<h1>Listing bookinfos</h1>
+
+<table>
+  <tr>
+    <th>Acct</th>
+    <th>Title</th>
+    <th>Author</th>
+    <th>Edition</th>
+    <th>Publication</th>
+  </tr>
+
+<% for bookinfo in @bookinfos %>
+  <tr>
+    <td><%=h bookinfo.acct %></td>
+    <td><%=h bookinfo.title %></td>
+    <td><%=h bookinfo.author %></td>
+    <td><%=h bookinfo.edition %></td>
+    <td><%=h bookinfo.publication %></td>
+    <td><%= link_to 'Show', bookinfo %></td>
+    <td><%= link_to 'Edit', edit_bookinfo_path(bookinfo) %></td>
+    <td><%= link_to 'Destroy', bookinfo, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New bookinfo', new_bookinfo_path %>

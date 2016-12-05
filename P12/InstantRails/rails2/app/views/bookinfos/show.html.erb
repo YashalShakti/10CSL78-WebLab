@@ -1,0 +1,28 @@
+<p>
+  <b>Acct:</b>
+  <%=h @bookinfo.acct %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%=h @bookinfo.title %>
+</p>
+
+<p>
+  <b>Author:</b>
+  <%=h @bookinfo.author %>
+</p>
+
+<p>
+  <b>Edition:</b>
+  <%=h @bookinfo.edition %>
+</p>
+
+<p>
+  <b>Publication:</b>
+  <%=h @bookinfo.publication %>
+</p>
+
+
+<%= link_to 'Edit', edit_bookinfo_path(@bookinfo) %> |
+<%= link_to 'Back', bookinfos_path %>
