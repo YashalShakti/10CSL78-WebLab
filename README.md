@@ -47,7 +47,7 @@ to
 * Change the directory to `/var/www/html` and write HTML/XML/CSS/PHP.
 * Open http://localhost/name.html,.xml,.php
 * Change the directory to `/var/www/cgi-bin` for Perl/CGI programs. 
-* Change the permission to 777 - `chmod 777`
+* Change the permission to 777 - `chmod 777` for all files in `/var/www/cgi-bin`
 * Open http://localhost/cgi-bin/name.cgi,.pl
 * Start MySQL service - `systemctl start mysqld.service`
 * Create MySQL user - `CREATE USER 'username'@'localhost' IDENTIFIED BY 'some_pass'`;
