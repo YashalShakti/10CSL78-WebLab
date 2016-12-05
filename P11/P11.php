@@ -1,9 +1,6 @@
-<!-- Create a XHTML form with Name, Address Line 1, Address Line 2, and E-mail text fields. On submitting, store the values in MySQL table. Retrieve and display the data based on Name. -->
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"!>
 <html> <body>
 <?php
-		# Use your username and password instead of "root",""
 		$con = mysql_connect("127.0.0.1","root","") or die("Error in MySQL connection" . mysql_error());
 		mysql_select_db("10CSL78");
 		$search = $_REQUEST["search"];
@@ -12,14 +9,16 @@
 			$addr1=$_REQUEST["addr1"];
 			$addr2=$_REQUEST["addr2"];
 			$email=$_REQUEST["email"];
-			if(mysql_query("INSERT INTO students VALUES('$name','$addr1','$addr2','$email')"))
-				print "<h3>Data inserted successfully <br/> <br/> </h3>"; # Can use else print(mysql_error()); to print error
-
+			if($name != ""){
+				if(mysql_query("INSERT INTO students VALUES('$name','$addr1','$addr2','$email')"))
+								print "<h3>Data inserted successfully <br/> <br/> </h3>";
+				 # Can use else print(mysql_error()); to print error
+			}
 		} else {
-			$result = mysql_query("SELECT * FROM students WHERE name LIKE '%".$search."%'");
+			$result=mysql_query("SELECT * FROM students WHERE name LIKE '%".$search."%'");
 			if (mysql_num_rows($result) > 0) {
 				print "<h3> Search results:</h3>";
-				while ($row = mysql_fetch_array($result)){
+				while($row = mysql_fetch_array($result)){
 					echo "<br/> <b>Name: ".$row["name"]."</b> <br/>Address1: ".$row['addr1'].
 					" <br/>Address2: ".$row['addr2']." <br/>Email: ".$row['email']."<br/>";
 				}
