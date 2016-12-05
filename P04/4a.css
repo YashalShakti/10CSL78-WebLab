@@ -20,7 +20,7 @@ student-information {
 }
 
 student {
-	border: solid black thin;
+	border:thin black solid;
 	display: block;
 	margin: 10px;
 }
@@ -28,4 +28,8 @@ student {
 label {
 	display: block;
 	margin: 2px;
+}
+
+USN {
+	color: blue;
 }

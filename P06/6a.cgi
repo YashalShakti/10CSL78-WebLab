@@ -1,5 +1,3 @@
-# Write a Perl program to accept the User Name and display a greeting message randomly chosen from a list of 4 greeting messages.
-
 #!/usr/bin/perl
 use CGI qw(:standard);
 print header().start_html();
@@ -11,3 +9,5 @@ if ($name ne "") {
 	print "Enter your name: <form> <input type='text' name='name' > <input type='submit'/></form>";
 }
 print end_html();
+
+# Write a Perl program to accept the User Name and display a greeting message randomly chosen from a list of 4 greeting messages.

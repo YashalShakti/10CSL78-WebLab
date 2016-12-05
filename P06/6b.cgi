@@ -1,5 +1,3 @@
-# Write a Perl program to keep track of the number of visitors visiting the web page and to display this count of visitors, with proper headings
-
 #!/usr/bin/perl
 use CGI qw(:standard);
 print header().start_html();
@@ -17,3 +15,5 @@ close(FILE);
 
 print "The number of visitors are: ".$count;
 print end_html();
+
+# Write a Perl program to keep track of the number of visitors visiting the web page and to display this count of visitors, with proper headings
