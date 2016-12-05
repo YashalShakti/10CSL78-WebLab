@@ -54,7 +54,7 @@ to
 * Grant access to user - `GRANT ALL ON *.* to username@localhost identified by 'some_pass'`;
 
 
-# For MySQL DBI
+# For installing MySQL DBI
 `perl -MCPAN -e shell # Choose sudo or local`
 
 `perl Makefile.PL --testdb=test --testuser=username --testpassword=password --testhost=localhost`
