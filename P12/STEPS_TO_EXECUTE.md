@@ -13,7 +13,7 @@
 
 Then change the app/controller/main_controller.rb and app/views/main/search.html.erb
 
-# Rails v2/Instant rails
+# Rails v2/Instant rails - Legacy - Only used at some placess
 `rails -d mysql rails2`
 
 `rake db:create`
