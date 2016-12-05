@@ -14,10 +14,14 @@
 
 		} else {
 			$result=mysql_query("SELECT * FROM students WHERE name LIKE '%".$search."%'");
-			print "<h3> Search results:</h3>";
-			while($row = mysql_fetch_array($result)){
-				echo "<br/> <b>Name: ".$row["name"]."</b> <br/>Address1: ".$row['addr1'].
-				" <br/>Address2: ".$row['addr2']." <br/>Email: ".$row['email']."<br/>";
+			if (mysql_num_rows($result) > 0) {
+				print "<h3> Search results:</h3>";
+				while($row = mysql_fetch_array($result)){
+					echo "<br/> <b>Name: ".$row["name"]."</b> <br/>Address1: ".$row['addr1'].
+					" <br/>Address2: ".$row['addr2']." <br/>Email: ".$row['email']."<br/>";
+				}
+			} else {
+				print "<h3>No results found</h3>";
 			}
 		}
 ?>
