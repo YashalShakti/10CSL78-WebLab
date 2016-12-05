@@ -23,7 +23,8 @@
 ?>
 <h3>Insert:</h3> 
 <form> <input type="text" name="name" placeholder="Name"> <input type="text" name="addr1" placeholder="Address 1">
- <input type="text" name="addr2" placeholder="Address 2"> <input type="text" name="email" placeholder="Email"> <input type="submit"> </form>
+ <input type="text" name="addr2" placeholder="Address 2"> <input type="text" name="email" placeholder="Email">
+  <input type="submit"> </form>
 
 <h3>Search:</h3>
 <form> <input type="text" name="search" placeholder="Name"> <input type="submit"> </form>
@@ -31,5 +32,6 @@
 
 <!-- 
 SQL - 
+USE 10CSL78;
 CREATE TABLE students(name varchar(20), addr1 varchar(20), addr2 varchar(20), email varchar(20));
 -->
